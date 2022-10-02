@@ -8,10 +8,13 @@ import {MatSliderModule} from "@angular/material/slider";
 import {DatePickerModule} from "./shared/components/date-picker/date-picker.module";
 import {HseMatSelectSearchModule} from "./shared/components/hse-mat-select-search/hse-mat-select-search.module";
 import {FlexLayoutModule} from "@angular/flex-layout";
+import {HighchartsChartModule} from "highcharts-angular";
+import {HichartComponent} from "@app/shared/components/hichart/hichart.component";
 
 @NgModule({
   declarations: [
     AppComponent,
+    HichartComponent,
   ],
   imports: [
     BrowserModule,
@@ -20,7 +23,8 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     BrowserAnimationsModule,
     DatePickerModule,
     HseMatSelectSearchModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HighchartsChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]

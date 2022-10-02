@@ -23,6 +23,8 @@
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
     "hammerjs": "^2.0.8",
+    "highcharts": "^10.2.1",
+    "highcharts-angular": "^3.0.0",
     "jalali-moment": "^3.3.11",
     "ngx-mat-select-search": "^4.2.1",
     "rxjs": "~7.5.0",

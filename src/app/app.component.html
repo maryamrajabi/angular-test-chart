@@ -1,4 +1,9 @@
-<div dir="rtl" fxLayout="row" fxLayoutGap="50px">
-  <app-date-picker fxFlex="20" [label]="'انتخاب سال مبدا'"></app-date-picker>
-  <hse-multiple-selection-select-all fxFlex="20" [dir]="direction"></hse-multiple-selection-select-all>
+<div fxLayout="column">
+  <div dir="rtl" fxLayout="row" fxLayoutGap="50px">
+    <app-date-picker fxFlex="20" [label]="'انتخاب سال مبدا'"></app-date-picker>
+    <hse-multiple-selection-select-all fxFlex="20"></hse-multiple-selection-select-all>
+  </div>
+  <div dir="rtl" fxLayout="row" fxLayoutGap="50px">
+    <app-hichart></app-hichart>
+  </div>
 </div>
