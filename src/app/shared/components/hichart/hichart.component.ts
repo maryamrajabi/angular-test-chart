@@ -8,33 +8,23 @@ import * as Highcharts from "highcharts";
 
 })
 export class HichartComponent {
-
+  // https://blacklabel.github.io/grouped_categories/
   Highcharts = Highcharts;
   linechart: any = {
-    series: [
-      {
-        data: [1, 2, 3],
-      },
-      // {
-      //   type: 'pareto',
-      //   name: 'Pareto',
-      //   yAxis: 1,
-      //   zIndex: 10,
-      //   baseSeries: 1,
-      //   tooltip: {
-      //     valueDecimals: 2,
-      //     valueSuffix: '%'
-      //   }
-      // },
-      {
-        name: 'Complaints',
-        type: 'column',
-        zIndex: 2,
-        data: [755, 222, 151, 86, 72, 51, 36, 10]
-      }
-    ],
-    chart: {
+    series: [{
       type: 'column',
+      name: 'درآمد عملیاتی',
+      data: [3, 2, 1, 3, 4]
+    }, {
+      type: 'spline',
+      name: 'حاشیه سود عملیاتی - ارفع',
+      data: [2, 3, 5, 7, 6]
+    },
+      {
+      type: 'spline',
+      name: 'حاشیه سود عملیاتی - اخابر',
+      data: [3, 2.67, 3, 6.33, 3.33]
+    }],    chart: {
     },
     title: {
       text: 'linechart',
@@ -55,22 +45,44 @@ export class HichartComponent {
       ],
       crosshair: true
     },
-    yAxis: [{
-      title: {
-        text: ''
+    yAxis: {
+      type: 'category',
+      grid: {
+        borderColor: '#3a5d96',
+        columns: [{
+          title: {
+            text: 'Tasks',
+            rotation: 45,
+            y: -15,
+            x: -15
+          }
+        }, {
+          title: {
+            text: 'Assignee',
+            rotation: 45,
+            y: -15,
+            x: -15
+          },
+          labels: {
+            format: '{point.assignee}'
+          }
+        }, {
+          title: {
+            text: 'Duration',
+            rotation: 45,
+            y: -15,
+            x: -15
+          },
+          labels: {
+            formatter: function() {
+              var point = this.point,
+                days = (1000 * 60 * 60 * 24),
+                number = (point.end - point.start) / days;
+              return Math.round(number * 100) / 100;
+            }
+          }
+        }]
       }
-    }, {
-      title: {
-        text: ''
-      },
-      minPadding: 0,
-      maxPadding: 0,
-      max: 100,
-      min: 0,
-      opposite: true,
-      labels: {
-        format: "{value}%"
-      }
-    }],
+    },
   };
 }
