@@ -2,3 +2,18 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@font-face {
+  font-family: "Yekan";
+  src: url("assets/fonts/iran-yekan/iranyekanwebregular(fanum).eot");
+  src: url("assets/fonts/iran-yekan/iranyekanwebregular(fanum).eot") format("embedded-opentype"),
+  url("assets/fonts/iran-yekan/iranyekanwebregular(fanum).woff2") format("woff2"),
+  url("assets/fonts/iran-yekan/iranyekanwebregular(fanum).woff") format("woff"),
+  url("assets/fonts/iran-yekan/iranyekanwebregular(fanum).ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+input, span, label, mat-label, mat-card-title, mat-card-subtitle, mat-hint, legend, .fieldset__helper, button {
+  font-family: 'Yekan';
+}

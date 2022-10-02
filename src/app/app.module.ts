@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSliderModule} from "@angular/material/slider";
 import {DatePickerModule} from "./shared/components/date-picker/date-picker.module";
+import {HseMatSelectSearchModule} from "./shared/components/hse-mat-select-search/hse-mat-select-search.module";
+import {FlexLayoutModule} from "@angular/flex-layout";
 
 @NgModule({
   declarations: [
@@ -14,9 +16,11 @@ import {DatePickerModule} from "./shared/components/date-picker/date-picker.modu
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
     MatSliderModule,
-    DatePickerModule
+    BrowserAnimationsModule,
+    DatePickerModule,
+    HseMatSelectSearchModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

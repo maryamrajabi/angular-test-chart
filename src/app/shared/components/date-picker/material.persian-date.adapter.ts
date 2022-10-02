@@ -3,13 +3,13 @@ import { DateAdapter } from '@angular/material/core';
 
 export const PERSIAN_DATE_FORMATS = {
   parse: {
-    dateInput: 'jYYYY/jMM/jDD'
+    dateInput: 'jYYYY'
   },
   display: {
-    dateInput: 'jYYYY/jMM/jDD',
-    monthYearLabel: 'jYYYY jMMMM',
-    dateA11yLabel: 'jYYYY/jMM/jDD',
-    monthYearA11yLabel: 'jYYYY jMMMM'
+    dateInput: 'jYYYY',
+    monthYearLabel: 'jYYYY',
+    dateA11yLabel: 'jYYYY',
+    monthYearA11yLabel: 'jYYYY'
   }
 };
 
