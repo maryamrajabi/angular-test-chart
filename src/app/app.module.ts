@@ -10,11 +10,16 @@ import {HseMatSelectSearchModule} from "./shared/components/hse-mat-select-searc
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {HighchartsChartModule} from "highcharts-angular";
 import {HichartComponent} from "@app/shared/components/hichart/hichart.component";
+import { Chart1Component } from './pages/chart1/chart1.component';
+import { Chart2Component } from './pages/chart2/chart2.component';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
     AppComponent,
     HichartComponent,
+    Chart1Component,
+    Chart2Component,
   ],
   imports: [
     BrowserModule,
@@ -24,7 +29,8 @@ import {HichartComponent} from "@app/shared/components/hichart/hichart.component
     DatePickerModule,
     HseMatSelectSearchModule,
     FlexLayoutModule,
-    HighchartsChartModule
+    HighchartsChartModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

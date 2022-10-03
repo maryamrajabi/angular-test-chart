@@ -12,6 +12,7 @@ export class DatePickerComponent {
 
   @Input() label: string = '';
   date = new FormControl(moment());
+  @Input() appearance: string = 'outline';
 
   setYear(normalizedMonthAndYear: any, datepicker: MatDatepicker<any>) {
     const ctrlValue = this.date.value!;

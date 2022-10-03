@@ -1,9 +1,6 @@
-<div fxLayout="column">
-  <div dir="rtl" fxLayout="row" fxLayoutGap="50px">
-    <app-date-picker fxFlex="20" [label]="'انتخاب سال مبدا'"></app-date-picker>
-    <hse-multiple-selection-select-all fxFlex="20"></hse-multiple-selection-select-all>
-  </div>
-  <div dir="rtl" fxLayout="row" fxLayoutGap="50px">
-    <app-hichart></app-hichart>
-  </div>
-</div>
+<button mat-button [matMenuTriggerFor]="menu">Change Page</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item routerLink="/">Page 1</button>
+  <button mat-menu-item routerLink="/another-page">Page 2</button>
+</mat-menu>
+<router-outlet></router-outlet>

@@ -1,0 +1,12 @@
+<div fxLayout="column">
+  <h2 style="margin-left: 10px">
+    Page 1
+  </h2>
+  <div dir="rtl" fxLayout="row" fxLayoutGap="50px">
+    <app-date-picker fxFlex="20" [label]="'انتخاب سال مبدا'"></app-date-picker>
+    <hse-multiple-selection-select-all fxFlex="20" (selectData)="getData($event)"></hse-multiple-selection-select-all>
+  </div>
+  <div dir="rtl" fxLayout="row" fxLayoutGap="50px">
+    <app-hichart fxFlex [data]="data"></app-hichart>
+  </div>
+</div>
